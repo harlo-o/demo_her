@@ -1,0 +1,15 @@
+{
+  "id": "qoq-med3-multimodal-reasoning-foundation-model",
+  "title": "QoQ-Med3: a multimodal reasoning foundation model for clinical analysis",
+  "authors": ["David Dai", "Jeannie She", "Jiaee Cheong", "Xing Han", "Carl Harris", "Haowen Wei", "Farzan Vahedifard", "Suchi Saria", "Robert Stevens", "Paul Liang"],
+  "venue": "npj Digital Medicine",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41746-026-02945-3",
+  "abstract": "Multimodal reasoning-based foundation models (MRFMs) hold considerable promise for addressing key challenges in medical practice, yet their readiness for real-world deployment remains insufficiently explored. To bridge this gap, we developed two MRFMs (QoQ-Med3 and QoQ-Med3-MIMIC) and systematically evaluated their (i) generalizability to previously unseen clinical modalities and tasks, (ii) transferability to held-out datasets collected across different clinical sites, and (iii) robustness to real-world challenges like cross-site heterogeneity. Our results demonstrate that these models can learn transferable representations across modalities, tasks, and heterogeneous clinical datasets. QoQ-Med3 achieves an overall balanced accuracy of 71.3% and a F1 of 0.349, superceding all open-source and closed-source models, including GPT-4o, with particularly pronounced gains in understudied modalities such as ultrasound and mammography. The model trained on public clinical data only generalized to both the held-out MIMIC-IV and the private JHU PMAP dataset collected at Johns Hopkins University hospital. In addition, the extrinsic hallucination rates are reduced by 44.4 percent after training. Collectively, our findings highlight both the potential of multimodal reasoning-based clinical foundation models and the critical next steps required to make them robust and reliable for real-world deployment.",
+  "axes": ["기관 간 일반화"],
+  "takeaway": "다중 임상 사이트의 이질적 데이터로 학습한 다중모달 추론 파운데이션 모델(QoQ-Med3)이 공개 데이터만으로 학습해도 외부 보류 데이터셋(MIMIC-IV, 존스홉킨스 사설 데이터)에 전이됨을 보이며, 환각률을 44.4% 감소시켰다.",
+  "relevance": "우리 코호트는 5개 기관에서 수집되어 institution_code별로 48~62건씩 비교적 고르게 분포하는 다기관 구조로, QoQ-Med3가 다룬 사이트 간 이질성(cross-site heterogeneity) 문제와 맞닿아 있으며, 향후 기관 교차 검증 설계에 참고할 수 있다.",
+  "caveat": "우리 데이터는 흉부 X-ray 단일 모달리티(272건)로 초음파·유방촬영 등 QoQ-Med3가 강조한 다중모달 성능 향상이나 환각률 개선은 이 코호트만으로 확인할 수 없다.",
+  "check": "우리 5개 기관 데이터를 하나씩 보류(leave-one-institution-out)했을 때 진단 라벨 예측 성능이 QoQ-Med3가 보고한 정도의 저하만 보이는지 확인할 수 있는가?"
+}

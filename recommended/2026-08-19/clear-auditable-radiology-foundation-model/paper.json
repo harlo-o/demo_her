@@ -1,0 +1,15 @@
+{
+  "id": "clear-auditable-radiology-foundation-model",
+  "title": "CLEAR: an auditable foundation model for radiology grounded in clinical concepts",
+  "authors": ["Tianyu Han", "Riga Wu", "Yu Tian", "Firas Khader", "Lisa C. Adams", "Keno K. Bressem", "Christos Davatzikos", "Jakob Nikolas Kather", "Li Shen", "David A. Mankoff", "Eduardo Mortani Barbosa", "Daniel Truhn"],
+  "venue": "Nature Biomedical Engineering",
+  "year": 2026,
+  "source": "OpenAlex",
+  "url": "https://doi.org/10.1038/s41551-026-01741-4",
+  "abstract": "'Black box' deep learning models for medical image interpretation limit clinical trust and analysis of performance degradation. Here we introduce Concept-Level Embeddings for Auditable Radiology (CLEAR), an auditable foundation model based on clinical concepts. Trained on over 0.87 million image-report pairs from 239,391 patients, CLEAR learns a visual representation and projects chest X-rays into a semantically rich space defined by large language model embeddings, making every prediction decomposable into weighted contributions from individual radiological observations. External validation on four large, physician-annotated datasets from the United States, Europe and Asia shows that CLEAR not only achieves state-of-the-art classification performance but also enables applications: auditable zero-shot pathology detection, systematic identification of radiological confounders and the creation of expert-level concept bottleneck models from data-driven concepts. By integrating clinical knowledge directly into its reasoning process, CLEAR offers a framework for robust model auditing, safer deployment and enhanced physician-AI collaboration, advancing towards trustworthy medical AI.",
+  "axes": ["기관 간 일반화", "판독 소견 연계 해석가능성"],
+  "takeaway": "대규모 흉부 X-ray-판독문 쌍으로 학습한 개념 기반 파운데이션 모델(CLEAR)이 미국·유럽·아시아 4개 외부 데이터셋에서 최고 수준 분류 성능과 함께 예측을 개별 판독 소견 단위로 분해해 설명할 수 있음을 보였다.",
+  "relevance": "본 코호트는 5개 기관(INST01-05)에서 수집된 272건, PA 184건/AP 88건 흉부 X-ray로 구성되며 No Finding 145건 외 Infiltration, Atelectasis, Nodule 등 다양한 소견이 섞여 있어, CLEAR가 검증한 다기관·다소견 환경과 구조적으로 유사하다. 이런 규모에서는 개별 병소 단위 해석보다 소견 단위 근거 제시가 판독의를 지원하는 데 더 현실적이다.",
+  "caveat": "우리 데이터는 판독문(report_text)이 있으나 CLEAR 수준의 대규모 개념 임베딩 학습이나 외부 검증에 필요한 표본 수(수십만 건)에는 크게 못 미쳐, 동일한 성능 재현 가능성은 이 데이터만으로 확인할 수 없다.",
+  "check": "우리 기관 5곳 간 판독 소견 분포 차이가 CLEAR류 개념 기반 모델의 confounder 식별 기능으로 드러날 만큼 뚜렷한지 소규모 파일럿으로 확인해볼 수 있는가?"
+}
